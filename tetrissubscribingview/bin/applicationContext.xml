@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+               
+<!-- Tetris -->         
+<bean id="skyblue" class="java.awt.Color">
+    <constructor-arg value="#00cccc" />
+</bean>
+<bean id="darkblue" class="java.awt.Color">
+    <constructor-arg value="#099898" />
+</bean>
+      
+<bean id="blockloc" class="tetrisshapesfx.Location">  
+    <property name="x" value="100"></property>  
+    <property name="y" value="100"></property>     
+</bean>
+<bean id="block" class="tetrisshapeimpl.MyBlock">  
+    <constructor-arg ref="blockloc"></constructor-arg>  
+    <constructor-arg type="Block1" ref="block1"></constructor-arg>  
+    <constructor-arg type="Block2" ref="block2"></constructor-arg>  
+    <constructor-arg type="Block3" ref="block3"></constructor-arg>  
+    <constructor-arg type="Block4" ref="block4"></constructor-arg>  
+    <constructor-arg type="Boolean" value="false"></constructor-arg>  
+</bean> 
+
+<bean id="block1loc" class="tetrisshapesfx.Location">  
+    <property name="x" value="100"></property>  
+    <property name="y" value="100"></property>     
+</bean>
+<bean id="block1" class="tetrisshapeimpl.Block1">  
+    <constructor-arg ref="block1loc"></constructor-arg>  
+    <constructor-arg type="int" value="23"></constructor-arg>  
+    <constructor-arg type="int" value="23"></constructor-arg>  
+    <constructor-arg type="Color" ref="skyblue"></constructor-arg>  
+    <constructor-arg type="Color" ref="darkblue"></constructor-arg>  
+</bean> 
+
+<bean id="block2loc" class="tetrisshapesfx.Location">  
+    <property name="x" value="100"></property>  
+    <property name="y" value="123"></property>     
+</bean>
+<bean id="block2" class="tetrisshapeimpl.Block2">  
+    <constructor-arg ref="block2loc"></constructor-arg>  
+    <constructor-arg type="int" value="23"></constructor-arg>  
+    <constructor-arg type="int" value="23"></constructor-arg>  
+    <constructor-arg type="Color" ref="skyblue"></constructor-arg>  
+    <constructor-arg type="Color" ref="darkblue"></constructor-arg>  
+</bean> 
+
+<bean id="block3loc" class="tetrisshapesfx.Location">  
+    <property name="x" value="100"></property>  
+    <property name="y" value="146"></property>     
+</bean>
+
+<bean id="block3" class="tetrisshapeimpl.Block3">  
+    <constructor-arg ref="block3loc"></constructor-arg>  
+    <constructor-arg type="int" value="23"></constructor-arg>  
+    <constructor-arg type="int" value="23"></constructor-arg>  
+    <constructor-arg type="Color" ref="skyblue"></constructor-arg>  
+    <constructor-arg type="Color" ref="darkblue"></constructor-arg>  
+</bean> 
+
+<bean id="block4loc" class="tetrisshapesfx.Location">  
+    <property name="x" value="100"></property>  
+    <property name="y" value="169"></property>     
+</bean>
+
+<bean id="block4" class="tetrisshapeimpl.Block4">  
+    <constructor-arg ref="block4loc"></constructor-arg>  
+    <constructor-arg type="int" value="23"></constructor-arg>  
+    <constructor-arg type="int" value="23"></constructor-arg>  
+    <constructor-arg type="Color" ref="skyblue"></constructor-arg>  
+    <constructor-arg type="Color" ref="darkblue"></constructor-arg>  
+</bean> 
+
+</beans>  
